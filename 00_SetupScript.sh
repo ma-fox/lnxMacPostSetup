@@ -79,3 +79,4 @@ sudo apt clean
 # Display Installation Complete Message
 echo "All good now :)"
 echo "Please, restart the computer, backup your system using Timeshift (if you installed it and want to) and then run the 2nd Script to install all your Apps."
+
