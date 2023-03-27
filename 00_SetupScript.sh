@@ -103,4 +103,12 @@ echo "Please, restart the computer, backup your system using Timeshift (if you i
 # # Run modular bash scripts
 # bash system_tools.sh
 # bash developer_tools.sh
+# bash terminal.sh
+# bash browsers.sh
+# bash communication.sh
+# bash graphics.sh
+# bash multimedia.sh
 # bash media.sh
+# bash productivity.sh
+# bash utilities.sh
+# bash themes.sh
