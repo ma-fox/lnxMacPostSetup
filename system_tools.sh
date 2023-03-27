@@ -10,5 +10,7 @@ if [[ $(uname -s) == "Darwin" ]]; then
 else
   # Ubuntu or other Debian-based Linux distros
   echo "Installing system tools for Linux..."
-
+  sudo apt-get install -y htop
+  sudo apt-get install -y tree
+  sudo apt-get install -y neofetch
 fi
