@@ -2,6 +2,26 @@
 
 # Setup Script
 
+# Detect the operating system
+if [[ $(uname -s) == "Darwin" ]]; then
+  # macOS
+  echo "Detected macOS"
+  # Install Homebrew package manager
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  # Install Xcode Command Line Tools
+  xcode-select --install
+elif [[ $(uname -s) == "Linux" ]]; then
+  # Ubuntu or other Debian-based Linux distros
+  echo "Detected Linux"
+  # Update apt-get
+  sudo apt-get update
+  # Install essential packages
+  sudo apt-get install -y build-essential curl file git
+else
+  echo "Unsupported operating system"
+  exit 1
+fi
+
 # Uninstall Bloatware Apps
 sudo apt --purge remove -y yelp*
 sudo apt --purge remove -y gnome-logs
@@ -80,3 +100,7 @@ sudo apt clean
 echo "All good now :)"
 echo "Please, restart the computer, backup your system using Timeshift (if you installed it and want to) and then run the 2nd Script to install all your Apps."
 
+# # Run modular bash scripts
+# bash system_tools.sh
+# bash developer_tools.sh
+# bash media.sh
